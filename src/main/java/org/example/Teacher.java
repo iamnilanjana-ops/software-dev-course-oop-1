@@ -1,16 +1,42 @@
 package org.example;
 
 public class Teacher {
-    // You'll need to implement this class:
 
-    // Add private fields for name and className
+    private String name;
+    private String subject;
 
-    // Add a constructor that takes a name and className and initializes the corresponding fields
+    // Constructor
+    public Teacher(String name, String subject) {
+        this.name = name;
+        this.subject = subject;
+    }
 
-    // Add getter methods for name and className
+    // Getters
+    public String getName() {
+        return name;
+    }
 
-    // Add setter methods for name and className
+    public String getSubject() {
+        return subject;
+    }
 
-    // Add a toString method that returns the teacher's name and className in the following format:
-    // name (className)
+    // Setters
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
+
+    // Teacher action
+    public void teach() {
+        System.out.println(name + " teaches " + subject);
+    }
+
+    // Print/display teacher information
+    @Override
+    public String toString() {
+        return "Name: " + name + ", Subject: " + subject;
+    }
 }

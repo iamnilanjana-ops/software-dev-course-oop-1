@@ -1,16 +1,19 @@
 package org.example;
 
 public class Student {
+
     private String name;
     private double grade;
     private int daysAbsent;
 
+    // Constructor
     public Student(String name, double grade, int daysAbsent) {
         this.name = name;
         this.grade = grade;
         this.daysAbsent = daysAbsent;
     }
 
+    // Getters
     public String getName() {
         return name;
     }
@@ -19,6 +22,11 @@ public class Student {
         return grade;
     }
 
+    public int getDaysAbsent() {
+        return daysAbsent;
+    }
+
+    // Setters
     public void setName(String name) {
         this.name = name;
     }
@@ -27,18 +35,25 @@ public class Student {
         this.grade = grade;
     }
 
-    public int getDaysAbsent() {
-        return daysAbsent;
-    }
-
     public void setDaysAbsent(int daysAbsent) {
         this.daysAbsent = daysAbsent;
     }
 
-    public String toString() {
-        return name + " " + grade;
+    // Add one absence
+    public void addAbsence() {
+        daysAbsent++;
     }
 
-    // Add a void method called addAbsence that increments the daysAbsent field by 1.
-    // Add a void method called addBonusPoints that takes a double parameter bonusPoints and adds it to the grade field.
+    // Add bonus points
+    public void addBonusPoints(double bonusPoints) {
+        grade += bonusPoints;
+    }
+
+    // Display student information
+    @Override
+    public String toString() {
+        return "Name: " + name +
+                ", Grade: " + grade +
+                ", Days Absent: " + daysAbsent;
+    }
 }
