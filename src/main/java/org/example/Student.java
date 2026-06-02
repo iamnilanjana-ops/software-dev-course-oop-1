@@ -49,11 +49,9 @@ public class Student {
         grade += bonusPoints;
     }
 
-    // Display student information
+    // String representation
     @Override
     public String toString() {
-        return "Name: " + name +
-                ", Grade: " + grade +
-                ", Days Absent: " + daysAbsent;
+        return name + " " + grade;
     }
 }

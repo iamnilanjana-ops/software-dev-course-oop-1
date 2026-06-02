@@ -3,40 +3,31 @@ package org.example;
 public class Teacher {
 
     private String name;
-    private String subject;
+    private String className;
 
-    // Constructor
-    public Teacher(String name, String subject) {
+    public Teacher(String name, String className) {
         this.name = name;
-        this.subject = subject;
+        this.className = className;
     }
 
-    // Getters
     public String getName() {
         return name;
     }
 
-    public String getSubject() {
-        return subject;
+    public String getClassName() {
+        return className;
     }
 
-    // Setters
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setSubject(String subject) {
-        this.subject = subject;
+    public void setClassName(String className) {
+        this.className = className;
     }
 
-    // Teacher action
-    public void teach() {
-        System.out.println(name + " teaches " + subject);
-    }
-
-    // Print/display teacher information
     @Override
     public String toString() {
-        return "Name: " + name + ", Subject: " + subject;
+        return name + " (" + className + ")";
     }
 }
